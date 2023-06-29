@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Projeto 3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+</head>
+
+<body>
+
+    <!--Nav-->
+    <nav class="nav navbar-light bg-light">
+        <div class="container-fluid row mb-2 mt-2">
+            <div class="col-2">
+                <h3>Meu Painel</h3>
+            </div>
+            <div class="buscar col-4">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                </form>
+            </div>
+            <div class="dropdown col-6 d-flex justify-content-md-end ">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Olá Miguel
+                </button> 
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Configurações</a></li>
+                    <li><a class="dropdown-item" href="#">Mensagens</a></li>
+                    <li><a class="dropdown-item" href="#">Sair</a></li>
+                </ul>
+            </div>
+    </nav>
+    <hr>
+
+    <!--Sidebar-->
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar" style="width: 170px; height:700px;">
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="#" class="nav-link link-dark" aria-current="page">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#home"></use>
+                    </svg>
+                    <p class="text-primary texto-m">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-house-door" viewBox="0 0 16 16">
+                            <path
+                                d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z" />
+                        </svg>
+                        Painel
+
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link link-dark">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#speedometer2"></use>
+                    </svg>
+                    <p class="texto-m"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-file-earmark" viewBox="0 0 16 16">
+                            <path
+                                d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z" />
+                        </svg>
+                        Ordens</p>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link link-dark">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#table"></use>
+                    </svg>
+                    <p class="texto-m"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-cart" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>
+                        Produtos</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="nav-link link-dark">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#people-circle"></use>
+                    </svg>
+                    <p class="texto-m">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-people" viewBox="0 0 16 16">
+                            <path
+                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
+                        </svg>
+                        Clientes
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link link-dark">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#people-circle"></use>
+                    </svg>
+                    <p class="texto-m"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z" />
+                        </svg>
+                        Relatórios</p>
+                </a>
+            </li>
+        </ul>
+     
+    </div>
+    </div>
+    <!--Parte da direita-->
+    <div class="parte-direita">
+
+        <ul class="nav bg-light cima-dir mt-3">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Início</a>
+            </li>
+            <li class="nav-item painel">
+                <a class="nav-link disabled" href="#">/ Painel</a>
+            </li>
+
+        </ul>
+
+        <h2>Painel</h2>
+        <p> essa é a página inicial de um painel administrativo</p>
+        <!--Card 4-->
+        <div class="row">
+            <div class=" col-3">
+                <div class="card card-t ">
+                    <div class="card-header">
+                        <strong> Clientes </strong>
+                    </div>
+                    <div class="card-body">
+                        <p class="texto"><strong>345 mil</strong></p>
+                        <p class="texto">Abril/2023-Junho/2023,Brasilia-DF</p>
+                       
+                        <p class="text-success texto">18,2% de aumento no período </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class=" col-3">
+                <div class="card card-t ">
+                    <div class="card-header">
+                        <strong> Receitas </strong>
+                    </div>
+                    <div class="card-body">
+                        <p class="texto"><strong>R$ 2,4 milhões</strong></p>
+                        <p class="texto">Abril/2023-Junho/2023,Brasilia-DF</p>
+                        <p class="text-success texto">4,6% de aumento no período </p>
+
+                        
+                    </div>
+                </div>
+
+            </div>
+            <div class=" col-3">
+                <div class="card card-t ">
+                    <div class="card-header">
+                        <strong> Compras </strong>
+                    </div>
+                    <div class="card-body">
+                        <p class="texto"><strong>42 Unidades</strong></p>
+                        <p class="texto">Abril/2023-Junho/2023,Brasilia-DF</p>
+                        <p class="text-danger texto">2,6 de decrescimo no período </p> 
+
+                    </div>
+                </div>
+
+            </div>
+            <div class=" col-3">
+                <div class="card card-t ">
+                    <div class="card-header">
+                        <strong> Tráfego </strong>
+                    </div>
+                    <div class="card-body">
+                        <p class="texto"><strong>42 Unidades</strong></p>
+                        <p class="texto">Abril/2023-Junho/2023,Brasilia-DF</p>
+                        <p class="text-success texto">4,5% de aumento no período </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--Card 2-->
+        <div class="mt-4 row">
+            <div class="col-6">
+                <div class="card">
+                <div class="card-header">
+                    <h6>Tráfego últimos 6 meses</h6>
+
+                </div>
+                <div class="card-body">
+                    <h4>Gráfico de linha</h4>
+                <canvas id="graficoLinha" width="100%"></canvas>
+                </div>
+
+            </div>
+            </div>
+
+
+
+            <div class="col-6">
+                <div class="card">
+                <div class="card-header">
+                    <h6>Últimas transações</h6>
+
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Ordem</th>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Cliente</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Data</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">17371705</th>
+                            <td>Produto 1</td>
+                            <td>maria@email.com</td>
+                            <td>R$61,11</td>
+                            <td>20/06/2023</td>
+                            <td><button class="btn btn-primary" type="submit">Detalhar</button></td>
+                            
+                          </tr>
+                          
+                          <tr>
+                            <th scope="row">17370540</th>
+                            <td>Produto 2</td>
+                            <td>jose@email.com</td>
+                            <td>R$53,11</td>
+                            <td>20/06/2023</td>
+                            <td><button class="btn btn-primary" type="submit">Detalhar</button></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">17371705</th>
+                            <td>Produto 1</td>
+                            <td>maria@email.com</td>
+
+                            <td>R$61,11</td>
+                            <td>20/06/2023</td>
+                            <td><button class="btn btn-primary" type="submit">Detalhar</button></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">17370540</th>
+                            <td>Produto 2</td>
+                            <td>jose@email.com</td>
+                            <td>R$53,11</td>
+                            <td>20/06/2023</td>
+                            <td><button class="btn btn-primary" type="submit">Detalhar</button></td>
+                          </tr>
+                          <tr>
+                        </tbody>
+                      </table>
+                      <button class="btn btn-secondary" type="submit" style="width: 100%;">Todas as transações</button>
+
+
+                </div>
+
+            </div>
+            </div>
+            
+<p class="text-secondary"> &#169; 2023</p>
+<p class="text-secondary texto-m text-end"> Política de privacidade  Termos de uso  Contato </p>
+
+
+        </div>
+
+   
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+        
+</body>
+<script>
+    
+    var ctx = document.getElementById("graficoLinha");
+    var graficoLinha = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Jan/2023", "Fev/2023", "Mar/2023", "Abr/2023", "Mai/2023", "Jun/2023",],
+            datasets: [{
+               
+                data: [23000, 24000, 19500, 35000, 58000, 63000],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+                borderWidth: 3,
+                borderColor: [
+                    'red',
+                ]
+                
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true,
+                        max:65000,
+                        stepSize:5000
+                    }
+                }]
+            }
+        }
+    });
+
+
+
+
+    </script>
+</html>

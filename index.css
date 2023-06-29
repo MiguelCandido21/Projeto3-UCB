@@ -1,0 +1,22 @@
+
+.buscar{
+    display: inline-block;
+    width: 25%;
+    margin-left: 5%;
+}
+#teste{
+    display: inline-block;
+}
+
+.sidebar{
+    display: inline-block;
+    float: left;
+}
+.texto{
+    margin-top: -10px;
+}
+.texto-m{
+    margin-top: -30px;
+}
+
+
